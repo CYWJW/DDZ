@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 
+package：指定当前映射文件的实体类model所在的包
+ -->
+<hibernate-mapping package="com.rl.model">
+	<!-- 
+		class：映射类
+		name:要映射的model的全路径
+		table:model映射到数据库的表名
+	 -->
+	<class name="Poker" table="poker">
+		<!-- id
+			是主键映射配置
+		 -->
+		<id name="id" column="id">
+			<!-- 
+				generator：主键的映射策略
+			 -->
+			<generator class="assigned"></generator>
+		</id>
+		<property name="name" ></property>
+		
+		<property name="num"></property>
+	</class>
+</hibernate-mapping>
